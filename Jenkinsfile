@@ -28,13 +28,13 @@ pipeline {
                                     sshTransfer(
                                         sourceFiles: 'dist/trainSchedule.zip',
                                         removePrefix: 'dist/',
-                                        remoteDirectory: '/tmp',
-                                        execCommand: 'rm -rf trainSchedule.zip && hostname && mkdir web'
+                                        remoteDirectory: '~ansible/web',
+                                        execCommand: 'rm -rf trainSchedule.zip ; unzip trainSchedule.zip ~ansible/web '
                                     )
                                 ]
                             )
                         ]
-                    )
+                    ) 
                 }
             }
         }
