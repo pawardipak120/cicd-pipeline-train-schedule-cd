@@ -29,7 +29,7 @@ pipeline {
                                         sourceFiles: 'dist/trainSchedule.zip',
                                         removePrefix: 'dist/',
                                         remoteDirectory: '/tmp',
-                                        execCommand: 'rm -rf trainSchedule.zip ; unzip trainSchedule.zip ~ansible/web'
+                                        execCommand: 'unzip /tmp/trainSchedule.zip ~ansible/web/'
                                     )
                                 ]
                             )
